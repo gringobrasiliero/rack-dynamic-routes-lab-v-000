@@ -8,6 +8,7 @@ req = Rack::Request.new(env)
       resp.write "#{Item.price}"
     else
       resp.write "Route not found"
+      resp.write "Item not found"
       resp.status = 404
     end
 
